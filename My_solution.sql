@@ -36,7 +36,7 @@ declare @currentdate as date
 set @currentdate = '2020-05-25';
 
 --create category table using CTE
-with inventory_tbl as (
+with inventory_tbl_cte as (
 select grp, sum(onhandquantitydelta) as inbound
 from (select *, grp = case
 when datediff(day, convert(DATE,event_datetime),@currentdate) <= 90 then 'a_0-90 days old'
@@ -54,5 +54,5 @@ from (select *,
 lag(inbound) over (order by grp desc) lag
 ,lead(inbound) over (order by grp desc) lead
 ,sum(inbound) over (order by grp desc ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) cum
-from inventory_tbl) b
+from inventory_tbl_cte) b
 order by grp;
