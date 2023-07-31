@@ -1,7 +1,9 @@
 I use SQL Fiddle (http://sqlfiddle.com) to practice and solve this problem. To see the result, on SQL Fiddle:
 - choose MS SQL Server 2017
-- copy the portion to create table from the sql script to the left window to create Schema
+- copy the portion to create table from My_solution.sql script to the left window to create Schema
 - copy the solution portion from the sql script to the right window. Note: need to select Keyword GO from the dropdown for Query Teminator under the right window before executing the script.
+
+I also uploaded word doc to show the results of the inner queries, CTE and the outputs from those steps.
 
 ## syntax used in SQL script
 
