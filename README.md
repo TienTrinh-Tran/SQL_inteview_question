@@ -3,6 +3,10 @@ I use SQL Fiddle (http://sqlfiddle.com) to practice and solve this problem. To s
 - copy the portion to create table from the sql script to the left window to create Schema
 - copy the solution portion from the sql script to the right window. Note: need to select Keyword GO from the dropdown for Query Teminator under the right window before executing the script.
 
+## syntax used in SQL script
+
+If I had access to the SQL server, I would use the #temp table instead of CTE and subqueries (I wasn't able to use temp table on SQL Fiddle for some reasons). I prefer #temp tables since they make the script more readable and easier to test and verify the results along the way.
+
 ## The logic to solve the problem:
 
 The company uses First in First out, meaning that the oldest inventory that come in to warehouse is the first to be sold out until the first inventory batch is depleted; then the inventory from the 2nd oldest batch will be used for selling and so on. 
